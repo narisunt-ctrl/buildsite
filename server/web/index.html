@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buildsite · ไซต์งานของ Claude</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 22a12 12 0 0 1 24 0z' fill='%23f2c230'/%3E%3Crect x='2' y='22' width='28' height='4' rx='2' fill='%23f2c230'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+  <div id="overlay"></div>
+
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M4 22a12 12 0 0 1 24 0z" fill="#f2c230"/><rect x="2" y="22" width="28" height="4" rx="2" fill="#f2c230"/></svg>
+      <div><strong>BUILDSITE</strong><span>ไซต์งานของ Claude Code</span></div>
+    </div>
+    <label class="picker" hidden>โครงการ <select id="project"></select></label>
+    <div class="actions">
+      <button id="follow" class="on" title="ให้กล้องตามอาคารที่กำลังสร้าง">ตามงาน</button>
+      <a id="report" class="btn primary" href="/report" target="_blank" rel="noopener">ใบตรวจรับงาน</a>
+    </div>
+  </header>
+
+  <aside class="diary">
+    <h2>บันทึกหน้างาน</h2>
+    <ol id="diary"></ol>
+  </aside>
+
+  <footer class="hud">
+    <div class="cell"><small>อาคาร</small><b id="bno">—</b><span id="bstatus"></span></div>
+    <div class="cell"><small>เวลา</small><b id="timer">00:00</b></div>
+    <div class="cell trades" id="trades"></div>
+    <div class="cell"><small>ข้อบกพร่องคงค้าง</small><b id="defects">0</b></div>
+    <div class="cell" id="tokcell" title=""><small>Token เข้า / ออก</small><b id="tokens">— / —</b></div>
+  </footer>
+
+  <div id="empty" class="empty" hidden>
+    <h1>ไซต์ยังว่างอยู่</h1>
+    <p>เริ่มคุยกับ Claude Code ในเซสชันใหม่ แล้วอาคารหลังแรกจะเริ่มก่อสร้างที่นี่</p>
+    <p class="muted">อยากดูตัวอย่างก่อน? รัน <code>npm run demo</code> ในโฟลเดอร์ <code>server/</code></p>
+  </div>
+  <div id="nogl" class="empty" hidden>
+    <h1>เบราว์เซอร์นี้แสดง 3D ไม่ได้</h1>
+    <p>เปิด hardware acceleration ในการตั้งค่าเบราว์เซอร์ แล้วโหลดหน้านี้ใหม่</p>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

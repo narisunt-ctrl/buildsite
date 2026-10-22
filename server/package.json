@@ -1,0 +1,14 @@
+{
+  "name": "claude-buildsite-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local server and 3D construction-site scene for the claude-buildsite plugin",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=18.17" },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node scripts/demo.js",
+    "start": "node src/daemon.js"
+  }
+}

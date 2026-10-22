@@ -1,0 +1,26 @@
+{
+  "$comment": "จับคู่ tool ของ Claude Code กับ 'สายงาน' บนไซต์ก่อสร้าง แก้ไฟล์นี้ หรือวางไฟล์ชื่อเดียวกันไว้ที่ ~/.buildsite/trades.json เพื่อแทนที่ค่าเริ่มต้น กฎถูกตรวจจากบนลงล่าง กฎแรกที่ตรงจะถูกใช้",
+  "trades": {
+    "survey": { "label": "ช่างสำรวจ", "color": "#2f80ed" },
+    "build": { "label": "ช่างก่อสร้าง", "color": "#f2994a" },
+    "qc": { "label": "วิศวกร QC", "color": "#27ae60" },
+    "sub": { "label": "ผู้รับเหมาช่วง", "color": "#9b51e0" }
+  },
+  "rules": [
+    { "tool": ["Agent", "Task"], "trade": "sub", "verb": "จ้างผู้รับเหมาช่วง" },
+    { "tool": ["Bash", "PowerShell"], "commandMatch": "\\b(test|tests|spec|pytest|jest|vitest|mocha|lint|eslint|tsc|typecheck|build|check|cargo test|go test|go vet)\\b", "trade": "qc", "verb": "ทดสอบหน้างาน" },
+    { "tool": ["Bash", "PowerShell"], "trade": "build", "verb": "ใช้เครื่องจักร" },
+    { "tool": ["Edit", "MultiEdit"], "trade": "build", "verb": "ซ่อม/แก้ชิ้นงาน" },
+    { "tool": ["Write"], "trade": "build", "verb": "ก่อชิ้นงานใหม่" },
+    { "tool": ["NotebookEdit"], "trade": "build", "verb": "แก้สมุดงาน" },
+    { "tool": ["Read"], "trade": "survey", "verb": "อ่านแบบ" },
+    { "tool": ["Grep"], "trade": "survey", "verb": "ค้นในแบบ" },
+    { "tool": ["Glob", "LS"], "trade": "survey", "verb": "สำรวจผัง" },
+    { "tool": ["WebSearch"], "trade": "survey", "verb": "สืบข้อมูลภายนอก" },
+    { "tool": ["WebFetch"], "trade": "survey", "verb": "เปิดเอกสารภายนอก" },
+    { "toolPrefix": "mcp__", "trade": "survey", "verb": "ประสานหน่วยงานนอก" },
+    { "tool": ["Skill", "ToolSearch"], "trade": "survey", "verb": "เปิดคู่มือ" },
+    { "tool": ["TodoWrite", "TaskCreate", "TaskUpdate"], "trade": "survey", "verb": "ลงแผนงาน" }
+  ],
+  "fallback": { "trade": "build", "verb": "งานทั่วไป" }
+}
