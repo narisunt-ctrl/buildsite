@@ -1,6 +1,6 @@
-# Buildsite — a construction site for Claude Code
+# Buildsite — a construction site for your AI coding agent
 
-**Watch Claude Code work as a live 3D construction site.** Every prompt raises a building. Every tool call adds an element. Failed calls become red defects until a later call fixes them. Every project exports a printable **handover report**.
+**Watch your AI coding agent work as a live 3D construction site.** Every prompt raises a building. Every tool call adds an element. Failed calls become red defects until a later call fixes them. Every project exports a printable **handover report**.
 
 Local only · read only · no npm install · MIT
 
@@ -10,7 +10,7 @@ Local only · read only · no npm install · MIT
 
 ## Reading the scene
 
-| On site | In Claude Code |
+| On site | In the agent session |
 |---|---|
 | A building | One prompt, from submit to final answer |
 | An element | One tool call |
@@ -31,13 +31,13 @@ Finished buildings stay on site, so a session leaves a visible history. Drag to 
 Requires Claude Code, Node.js 18.17+ and git.
 
 ```bash
-claude plugin marketplace add narisunt-ctrl/claude-buildsite
-claude plugin install buildsite@claude-buildsite
+claude plugin marketplace add narisunt-ctrl/buildsite
+claude plugin install buildsite@buildsite
 ```
 
-Start a **new** Claude Code session, then open `http://127.0.0.1:4646/` or run `/buildsite:site`.
+Start a **new** session, then open `http://127.0.0.1:4646/` or run `/buildsite:site`.
 
-Preview without Claude Code: `cd server && npm run demo`.
+Preview without a real session: `cd server && npm run demo`.
 
 ## Customising trades
 

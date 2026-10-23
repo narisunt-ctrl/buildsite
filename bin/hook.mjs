@@ -1,4 +1,4 @@
-// Claude Code hook → site office.
+// Agent hook → site office.
 // Contract: print nothing, exit 0 quickly, send only the fields the scene needs.
 import { serverInfo, post, startOffice, debug } from './common.mjs';
 

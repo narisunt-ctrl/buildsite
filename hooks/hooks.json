@@ -1,5 +1,5 @@
 {
-  "description": "Send a trimmed copy of each Claude Code event to the local construction-site scene",
+  "description": "Send a trimmed copy of each agent event to the local construction-site scene",
   "hooks": {
     "SessionStart": [{ "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/hook.mjs\"", "timeout": 10, "async": true }] }],
     "UserPromptSubmit": [{ "hooks": [{ "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/bin/hook.mjs\"", "timeout": 10, "async": true }] }],

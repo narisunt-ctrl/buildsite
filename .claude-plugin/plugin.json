@@ -1,7 +1,7 @@
 {
   "name": "buildsite",
   "version": "0.1.0",
-  "description": "Watch Claude Code work as a live 3D construction site: every prompt raises a building, every tool call adds an element, failures show as defects that get repaired, and each project exports a handover report.",
+  "description": "Watch your AI coding agent work as a live 3D construction site: every prompt raises a building, every tool call adds an element, failures show as defects that get repaired, and each project exports a handover report.",
   "author": {
     "name": "Narisan Nakakes"
   },

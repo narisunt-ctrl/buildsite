@@ -1,8 +1,8 @@
 {
-  "name": "claude-buildsite-server",
+  "name": "buildsite-server",
   "version": "0.1.0",
   "private": true,
-  "description": "Local server and 3D construction-site scene for the claude-buildsite plugin",
+  "description": "Local server and 3D construction-site scene for the Buildsite plugin",
   "type": "module",
   "license": "MIT",
   "engines": { "node": ">=18.17" },

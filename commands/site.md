@@ -1,5 +1,5 @@
 ---
-description: เปิดฉากไซต์ก่อสร้าง 3D ที่แสดงงานของ Claude Code (Open the 3D construction-site view)
+description: เปิดฉากไซต์ก่อสร้าง 3D ที่แสดงงานของ AI (Open the 3D construction-site view)
 allowed-tools: Bash(node:*)
 ---
 

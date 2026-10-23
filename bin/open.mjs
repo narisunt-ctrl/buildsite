@@ -7,7 +7,7 @@ if (!info) {
   console.log('เปิดสำนักงานไซต์ไม่สำเร็จ — ลองรัน: node server/src/daemon.js เพื่อดูข้อผิดพลาด');
   process.exit(0);
 }
-console.log(`ไซต์ก่อสร้างของ Claude: ${info.url}`);
+console.log(`ไซต์ก่อสร้าง Buildsite: ${info.url}`);
 if (!process.argv.includes('--no-browser')) {
   const [cmd, args] =
     process.platform === 'win32' ? ['cmd', ['/c', 'start', '', info.url]] : process.platform === 'darwin' ? ['open', [info.url]] : ['xdg-open', [info.url]];

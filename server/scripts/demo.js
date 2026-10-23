@@ -1,4 +1,4 @@
-// A made-up Claude Code session on repeat, so the site can be seen without Claude Code.
+// A made-up agent session on repeat, so the site can be seen without a real session.
 //   npm run demo            → http://127.0.0.1:4646/
 //   npm run demo -- --once  → play the script once, then keep the page up
 import { startServer } from '../src/server.js';

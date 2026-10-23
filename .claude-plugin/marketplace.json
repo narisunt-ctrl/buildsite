@@ -1,6 +1,6 @@
 {
-  "name": "claude-buildsite",
-  "description": "Buildsite: watch Claude Code work as a live 3D construction site",
+  "name": "buildsite",
+  "description": "Buildsite: watch your AI coding agent work as a live 3D construction site",
   "owner": {
     "name": "Narisan Nakakes"
   },
@@ -8,7 +8,7 @@
     {
       "name": "buildsite",
       "source": "./",
-      "description": "Live 3D construction-site view of Claude Code activity, with defect tracking and a handover report.",
+      "description": "Live 3D construction-site view of AI coding-agent activity, with defect tracking and a handover report.",
       "version": "0.1.0"
     }
   ]

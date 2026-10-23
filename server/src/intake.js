@@ -1,4 +1,4 @@
-// Turns the JSON a Claude Code hook receives into a small site event.
+// Turns the JSON an agent hook receives into a small site event.
 // Only whitelisted fields survive. Prompts, file contents, tool output and error text are never kept.
 
 const KINDS = new Set(['SessionStart', 'UserPromptSubmit', 'PreToolUse', 'PostToolUse', 'PostToolUseFailure', 'SubagentStop', 'Stop', 'SessionEnd']);

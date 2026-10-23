@@ -1,4 +1,4 @@
-// Background site office: one server per machine, shared by every Claude Code session.
+// Background site office: one server per machine, shared by every agent session.
 // Started on demand by bin/hook.mjs or bin/open.mjs. Writes its address to ~/.buildsite/server.json
 // and leaves by itself after an idle hour (no events, no open page).
 import fs from 'node:fs';

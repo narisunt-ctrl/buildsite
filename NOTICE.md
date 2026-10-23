@@ -6,7 +6,7 @@
 
 ## Inspiration
 
-The general idea of showing Claude Code activity as a 3D scene driven by hooks was inspired by
+The general idea of showing AI-agent activity as a 3D scene driven by hooks was inspired by
 [thekaroe-thailand/claude-code-3d](https://github.com/thekaroe-thailand/claude-code-3d) (MIT).
 This project is an independent implementation: its construction-site concept, data model
 (projects, buildings, elements, defects and repairs), configurable trade rules, scene,

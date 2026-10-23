@@ -1,6 +1,6 @@
-// Reads token usage from a Claude Code transcript (.jsonl), incrementally.
+// Reads token usage from an agent session transcript (.jsonl), incrementally.
 //
-// The transcript format is internal to Claude Code, so parsing is defensive: unknown lines are skipped
+// The transcript format is not a public API, so parsing is defensive: unknown lines are skipped
 // and, if nothing is found, totals stay null. A streamed assistant message can be written on several
 // lines that share one message id; we keep the latest usage seen for each id, so nothing is counted twice.
 import fs from 'node:fs/promises';
@@ -33,7 +33,7 @@ export function readUsageLine(line) {
   };
 }
 
-// The server may only read transcripts that live inside the Claude config folder.
+// The server may only read transcripts that live inside the agent's config folder.
 export function transcriptAllowed(file, env = process.env) {
   if (typeof file !== 'string' || path.extname(file) !== '.jsonl') return false;
   const root = path.resolve(env.CLAUDE_CONFIG_DIR || path.join(os.homedir(), '.claude'));

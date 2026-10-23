@@ -1,4 +1,4 @@
-// Trade rules: which crew on the site handles which Claude Code tool.
+// Trade rules: which crew on the site handles which agent tool.
 // Rules live in config/trades.json and can be overridden by ~/.buildsite/trades.json.
 import fs from 'node:fs';
 import os from 'node:os';

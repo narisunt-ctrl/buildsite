@@ -1,4 +1,4 @@
-// The site model. A Claude Code session is a project (โครงการ); each prompt is one building (อาคาร);
+// The site model. An agent session is a project (โครงการ); each prompt is one building (อาคาร);
 // each tool call is one element (ชิ้นงาน) of that building. Buildings stay on the site after handover,
 // so the project keeps a visible history of the day's work.
 //
@@ -74,7 +74,7 @@ function findActive(b, ev) {
     const hit = b.elements.find((e) => e.toolUseId === ev.toolUseId);
     if (hit) return hit;
   }
-  // Older Claude Code builds may not send tool_use_id: take the oldest active call of the same tool and key.
+  // Older agent builds may not send tool_use_id: take the oldest active call of the same tool and key.
   return b.elements.find((e) => e.status === 'active' && e.tool === ev.tool && e.key === ev.key)
     ?? b.elements.find((e) => e.status === 'active' && e.tool === ev.tool);
 }

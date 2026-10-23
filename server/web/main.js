@@ -77,7 +77,7 @@ function render(next) {
   $('empty').hidden = !!p || !$('nogl').hidden;
   scene?.update(p);
   $('report').href = p ? `/report?project=${encodeURIComponent(p.id)}` : '/report';
-  document.title = p?.name ? `${p.name} · Buildsite` : 'Buildsite · ไซต์งานของ Claude';
+  document.title = p?.name ? `${p.name} · Buildsite` : 'Buildsite · ไซต์งาน AI';
 
   const b = p?.buildings.at(-1);
   $('bno').textContent = b ? `#${b.no}` : '—';

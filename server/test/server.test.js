@@ -55,7 +55,7 @@ test('server accepts events, rejects foreign hosts and origins, serves report', 
   }
 });
 
-test('only transcripts inside the Claude folder are read', () => {
+test('only transcripts inside the agent config folder are read', () => {
   const env = { CLAUDE_CONFIG_DIR: path.join(os.tmpdir(), 'cc') };
   assert.ok(transcriptAllowed(path.join(env.CLAUDE_CONFIG_DIR, 'projects', 'a.jsonl'), env));
   assert.ok(!transcriptAllowed(path.join(env.CLAUDE_CONFIG_DIR, '..', 'etc.jsonl'), env));

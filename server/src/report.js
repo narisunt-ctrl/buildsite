@@ -101,6 +101,6 @@ export function renderReport(project, trades, now = Date.now()) {
 ${issues.length ? `<table><thead><tr><th>ตำแหน่ง</th><th>สายงาน</th><th>งาน</th><th>รายละเอียด</th><th>สถานะ</th></tr></thead><tbody>${issues.join('')}</tbody></table>` : '<p>ไม่พบข้อบกพร่อง</p>'}
 <h2>3. รายละเอียดชิ้นงาน</h2>
 ${details || '<p class="muted">—</p>'}
-<p class="muted" style="margin-top:32px;font-size:12px">"ข้อบกพร่อง" คือการเรียกเครื่องมือที่ Claude Code รายงานว่าล้มเหลว · Token เข้า รวม cache · ข้อมูลทั้งหมดอยู่ในเครื่องของคุณเท่านั้น</p>
+<p class="muted" style="margin-top:32px;font-size:12px">"ข้อบกพร่อง" คือการเรียกเครื่องมือที่ AI agent รายงานว่าล้มเหลว · Token เข้า รวม cache · ข้อมูลทั้งหมดอยู่ในเครื่องของคุณเท่านั้น</p>
 </main></body></html>`;
 }
